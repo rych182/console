@@ -1,0 +1,88 @@
+Consola:
+
+pwd: print working directory(usando consola git bash)
+cd: change directory
+ls: listado de todo lo que contiene mi directorio
+ls -l : todo lo que contiene pero en forma de lista
+ls -la: todo lo que contiene incluso archivos ocultos
+man ls: nos muestra un manual de la instrucción ls y no 	solo el ls, sino de cualquier instrucción
+clear : limpiar pantalla
+touch archivo.txt : te crea un archivo
+nano archivo.txt
+cat archivo.txt : te muestra lo que hay dentro de ese archivo
+mkdir "carpeta1" : creas una carpeta con el nombrede la carpeta que le quieras poner
+mv archivo.txt carpeta1 : mueves el archivo que quieres a la carpeta que quieres.
+rm archivo.txt : para borrar el archivo que quieras
+rm -rf carpeta1 : borra la carpeta que quieras con todo lo que tiene adentro
+
+Por primera vez, estar al día y luego adelantado x5 en cursos
+
+Shell CLI
+
+Son las interfaces que se representan por una línea de comandos, de ahí su nombre CLI (Command Line Interface) y suelen ser denominados como “terminal”, pero existen diferentes tipos de shell y cada uno tiene sus funcionalidades, algunos ejemplos de estos son:
+
+    Bash
+    Emacs
+    Korn
+    Zsh
+    Símbolo del sistema (Windows)
+
+Shell GUI
+
+Son las interfaces que representan de manera gráfica el sistema operativo denominados Interfaz Gráfica de Usuario, de ahí su nombre GUI (Graphical User Interface) y permiten interactuar con el sistema operativo de manera totalmente visual mostrando ventanas en los que se ejecutan los servicios requeridos, algunos ejemplos de estos son:
+
+    GNOME
+    KDE
+    LXDE
+    XFCE
+    Explorador de Windows
+
+Editor VIM
+cat "nombre del archivo" : te muestra el ccontenido del archivo
+vim "archivo.txt": abres un archivo en el editor
+i: sirve para comenzar a insertar datos en el archivo
+Esc: paras de escribir y te pone en modo de comandos
+k:Sube el curso un enter
+j:baja el curso un enter
+:w "nombre del archivo": así guardas un archivo nuevo
+:q :sales del archivo
+:wq guardar y salir
+
+Historial de comandos
+
+El historial siempre almacena por default todos los comandos que introducimos en nuestra terminal y la manera en que este se almacena en bash por ejemplo este se guarda en ~/.bash_history
+
+
+PIPES
+Obtener resultados y subresultados del historial
+history | grep "comando" 
+history | grep "comando" | grep box
+
+
+ps aux: todos los procesos que están corriendo en nuestro equipo
+ps aux | grep php: nos muestra los procesos que están corriendo y que estén relacionados a php
+ps aux | grep php | tee ~/desktop/php-process.txt: esto quiere decir que se guardarán todos los procesos que están corriendo relacionados a php en la dirección desktop en el archivo php-process.txt
+ 
+EJECUTAR UN ARCHIVO
+
+./"nombre del archivo
+
+QUITAR O AGREGAR PERMISOS
+
+listar los permisos del script: ls -lah "nombre archivo"
+
+sudo chmod +x "nombre del archivo" : permite que el archivo sea ejecutable
+
+sudo chmod -x "nombre del archivo" : quita el permiso para que archivo sea ejecutable
+
+sudo chmod "usuario" "nombre del archivo":cambiar el propietario del archivo
+
+Si no sirve lo de arriba del propietario, intenta esto de abajo.
+Para poder cambiar los archivos para que tengan ese propietario debemos usar el comando:
+sudo chown nombre_del_usuario nomre_del_archivo
+chown significa change owner (o cambiar propietario).
+
+sudo chmod 774 mensaje.sh :permiso se ejecución a un grupo
+
+
+
